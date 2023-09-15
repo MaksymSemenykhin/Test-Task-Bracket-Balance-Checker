@@ -21,7 +21,15 @@ Examples:
 
 ```php
 $result = check_brackets("[({})]");
-echo $result;  // Outputs "Fail"
+echo $result;  // Outputs "Incorrect"
+```
+
+```php
+// Test cases
+$expr1 = "[({})]";
+$expr2 = "[([)]";
+echo check_brackets($expr1) . PHP_EOL;  // Should return "Correct"
+echo check_brackets($expr2) . PHP_EOL;  // Should return "Incorrect"
 ```
 
 3. The function will return "Fail" if the brackets are balanced, otherwise it will return "Не верно".
